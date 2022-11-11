@@ -23,4 +23,7 @@ public class DbConnect {
         Class.forName("com.mysql.jdbc.Driver");
         return DriverManager.getConnection(url,user,password);
     }
+    public static void main(String[] args) throws Exception {   
+            System.out.println(new DbConnect().getConnection());
+    }
 }

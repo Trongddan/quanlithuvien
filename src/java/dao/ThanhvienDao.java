@@ -24,10 +24,12 @@ public class ThanhvienDao {
     // hàm kiểm tra đăng nhập
     public Thanhvien checkLogin(String tendangnhap, String matkhau) throws SQLException {
         Thanhvien tv = new Thanhvien();
-        String query = "Select * from tbl_thanhvien132 where tendangnhap=" + tendangnhap + " and matkhau=" + matkhau;
+        String query = "SELECT * FROM tbl_thanhvien132 WHERE tendangnhap= ? AND matkhau=?";
         try {
             conn = new DbConnect().getConnection();
             ps = conn.prepareStatement(query);
+            ps.setString(1,tendangnhap);
+            ps.setString(2,matkhau);
             rs = ps.executeQuery();
             while (rs.next()) {
                 tv = new Thanhvien(

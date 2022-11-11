@@ -15,13 +15,14 @@
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="LoginController" method="post">
                             <h3 class="text-center text-info">Đăng nhập</h3>
+                            <p>${mess}</p>
                             <div class="form-group">
                                 <label for="username" class="text-info">Tài khoản:</label><br>
                                 <input type="text" name="tendangnhap" id="username" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Mật khẩu:</label><br>
-                                <input type="password" name="matkhau" id="password" class="form-control">
+                                <input type="text" name="matkhau" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="Đăng nhập" class="btn btn-info btn-md" value="submit">
